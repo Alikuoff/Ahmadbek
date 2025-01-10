@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-800: #1a1f2c;
+  --navy-900: #0f1219;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--navy-900);
+  color: white;
+}
+
+@keyframes slideShow {
+  0%, 33% {
+    transform: translateX(0);
+  }
+  34%, 66% {
+    transform: translateX(-100%);
+  }
+  67%, 100% {
+    transform: translateX(-200%);
+  }
+}
+
+.slide-track {
+  display: flex;
+  width: 400%; /* Adjust based on the number of images */
+  animation: slideShow 12s infinite;
+}
+
+/* Optional: Pause animation on hover */
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar */
+.overflow-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s forwards; /* 1 soniya davomida ko'rinadi */
+}
+
+.delay-3000 {
+  animation-delay: 3s; /* 3 soniya kechikish */
+}
+
+.delay-6000 {
+  animation-delay: 6s; /* 6 soniya kechikish */
+}
